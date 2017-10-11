@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/normalize/7.0.0/normalize.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+ <div class="container container-sm">
+    <div class="header">
+        <h1>注册</h1>
+
+    </div>
+    <div class="form">
+        <form id="signup">
+            <label class="tips">*为必填项</label>
+            <div class="input-wrap">
+                <label>*姓名</label>
+                <input data-rule='maxlength:5|minlength:2|numeric:false|required:true'
+                       type="text"
+                       name="name"
+                       class="input-control">
+                <div id="name-input-error" class="input-error">姓名格式有误</div>
+            </div>
+            <div class="input-wrap">
+                <label>*用户名</label>
+                <input data-rule='pattern:"^[a-zA-Z0-9]*$"|maxlength:12|minlength:4|required:true'
+                       type="text"
+                       name="username"
+                       class="input-control">
+                <div id="username-input-error" class="input-error">用户名格式有误</div>
+            </div>
+            <div class="input-wrap">
+                <label>*年龄</label>
+                <input data-rule='min:18|numeric:true|required:true'
+                       type="text"
+                       name="age"
+                       class="input-control">
+                <div id="age-input-error" class="input-error">年龄格式有误</div>
+            </div>
+            <div class="input-wrap">
+                <label>*密码</label>
+                <input data-rule='minlength:6|maxlength:15|required:true'
+                       type="password"
+                       name="password"
+                       class="input-control">
+                <div id="password-input-error" class="input-error">密码格式有误</div>
+            </div>
+            <div class="input-wrap">
+                <label>个性签名</label>
+                <input data-rule='maxlength:20'
+                       type="text"
+                       name="sign"
+                       class="input-control">
+                <div id="sign-input-error" class="input-error">签名格式有误</div>
+            </div>
+            <button class="button-control" type="submit">注册</button>
+
+        </form>
+    </div>
+ </div>
+<script src="jquery.js"></script>
+<script src="validator.js"></script>
+<script src="input.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
